@@ -1,0 +1,29 @@
+h1{color:
+    white;
+    font-size: 100px;
+    position: static;
+    margin-left: 350px;
+    margin-right: 350px;}
+body{background-color: darkblue;}
+
+#horizont
+
+.left {background-color: gray;
+    margin-top:50px;
+    width: 3px;
+    }
+
+.bldiv {background-color:lightslategray;
+    padding: 40px;
+    padding-left: 40;
+    padding-right: 40;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-radius: 15px;
+    margin-bottom: 50px;} 
+
+#Titular{color:black;
+    font-size: 40px;
+    margin-top: 5px;
+    }
+.elemento{color:white}
