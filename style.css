@@ -67,45 +67,185 @@ transition: 1s;}
   transition: 1s;
 }
 
-#Scards{
-  margin: 15% 3%;
+/* Add this CSS code to your existing CSS */
 
+#Scards {
+  margin: 10%;
+  border-radius: 20px;
+  align-items: center;
 }
-.card-group{column-gap: 2%;}
-.card{border: solid 2px black;
-  border-left: none;
 
-  }
-.card:hover{
-scale: 1.04;
-transition: 0.2s; }
-.card-img-top{
+#Scards p {
+  font-size: 16px;
+  margin-top: 2%;
+}
+
+.card-img {
   object-fit: cover;
-  width: 100%;
-  max-height: 200px;
-  aspect-ratio: 1/1;
+  justify-content: center;
+  align-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  height: 500px;
+  border-radius: 20px;
 }
 
-#Acards{
-  margin: 15% 3%;
+.cart-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.s1{color: rgb(245, 0, 245);}
-.s2{color: rgb(122, 0, 0);}
-.s3{color: blue;}
+.card-img-overlay:hover .cart-icon {
+  opacity: 1;
+}
 
-.card-footer{
-align-items: center;}
+.card-img-overlay .cart-icon i {
+  color: white;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-.Purchase{background-color: rgb(58, 58, 209) !important;
-margin: 2% 2%;
-border: solid black 1px;
-border-radius: 5px;}
-.Info{margin: 2% 2%;
-border-radius: 5px;}
+.card-img-overlay .cart-icon:hover i {
+  color: aqua;
+}
 
+.cart-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 500px;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 999;
+  display: none;
+}
+
+/* Your existing CSS styles */
+
+/* Add the following styles for the cart popup */
+.cart-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 500px;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 999;
+  display: none;
+}
+
+.cart-popup.open {
+  display: block;
+}
+
+.cart-popup .cart-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.cart-popup .cart-item .cart-popup-img {
+  width: 200px;
+  height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-popup .cart-item .info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-popup .cart-item .info h3 {
+  margin: 0;
+}
+
+.cart-popup .cart-item .info .price {
+  margin: 5px 0 0;
+}
+
+
+.cart-popup .cart-item .info p {
+  margin: 5px 0 0;
+}
+
+.cart-popup .add-to-cart-btn {
+  margin-top: 10px;
+  margin-right: 5px; /* Add margin-right */
+  background-color: rgb(11, 138, 95);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-popup .go-to-cart-btn {
+  margin-top: 10px;
+  margin-left: 5px; /* Add margin-left */
+  background-color: #ccc;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+.cart-popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.cart-popup .close-btn:hover{
+  color: RED;
+}
+
+.cart-popup .cart-total {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+  
+  
 
 @media screen and (max-width: 800px){
+  
+#Scards{margin: 0%;
+  margin-top: 8%;
+  border-radius: 0px;}
+.card-img{border-radius: 0px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 300px;
+  height: 300px;}
+
 .navbar-brand{max-width: 30%;
 max-height: 100%;}
 .carousel-item{padding: 0% 0%;}
@@ -125,13 +265,6 @@ max-height: 100%;}
   
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(0%);
+    filter: invert(0%);}
+
 }
-#Scards{margin: 15% 10%;}
-
-#Acards{margin: 15% 10%;}
-
-.card-group{
-  column-gap: 2%;
-  }
-}  
