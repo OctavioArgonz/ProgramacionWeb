@@ -310,7 +310,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const quantityInput = cartItem.querySelector('.item-quantity');
         quantityInput.addEventListener('input', () => {
-          const newQuantity = parseInt(quantityInput.value);
+          let newQuantity = parseInt(quantityInput.value);
+          if (isNaN(newQuantity) || newQuantity < 1) {
+            newQuantity = 1;
+          }
           const priceElement = cartItem.querySelector('.item-price');
           total -= newItem.price * newItem.quantity;
           newItem.quantity = newQuantity;
